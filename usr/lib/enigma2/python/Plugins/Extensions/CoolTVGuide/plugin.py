@@ -5664,7 +5664,7 @@ class lKVEwGYfTpgWH(HTMLComponent, GUIComponent):
                     self.wuqkSpGyxrM.startDecode(YTSEoIi, 0, 0, False)
                     res.append(MultiContentEntryPixmapAlphaBlend(pos=(self.MUWkjDk, self.mWkRquQGU), size=(cwjjzqyTcBh / 0.6, cwjjzqyTcBh), png=self.wuqkSpGyxrM.getData(), backcolor=sZFcJcEYedYG, backcolor_sel=RYWUNgKwKamFGs))
             res.append(MultiContentEntryText(pos=(self.mMQSGwZt + JixFEWcBYWgVHg, self.BwBxpeGsFk), size=(DrEcqGyi, 50), font=1, text='%02d. ' % self.xpFKRFDhSumIm(UMUhLJhkv) + AemZEBZRFVH, color=IljDvazPimAt, color_sel=QLxdqGrZFSq, backcolor=sZFcJcEYedYG, backcolor_sel=RYWUNgKwKamFGs))
-            if rbuTrfjskKNUrpX > pVdYFhAaXsyyci and self.icJJVKHwold < 20 and self.wPCDGUrewS == 0:
+            if rbuTrfjskKNUrpX > int(pVdYFhAaXsyyci) and self.icJJVKHwold < 20 and self.wPCDGUrewS == 0:
                 oVoKs += self.vDtXdSWMj - self.IwKiKwc
             res.append(MultiContentEntryText(pos=(self.CwbbgtPbYdAJaNS + JixFEWcBYWgVHg, self.icJJVKHwold), size=(oVoKs - JixFEWcBYWgVHg, 50), font=2, text=cIlYUZavCM, color=uSfYSrtgTKg, color_sel=QLxdqGrZFSq, backcolor=sZFcJcEYedYG, backcolor_sel=RYWUNgKwKamFGs))
             if pVdYFhAaXsyyci is not None:
