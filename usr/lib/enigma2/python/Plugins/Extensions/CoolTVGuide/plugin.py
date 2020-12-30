@@ -909,7 +909,7 @@ class zDKhcfAp(Screen):
             if vMbOnIO is not None:
                 oPDKlR = self['CoolSimilar']
                 qputw = oPDKlR.getText()
-                vMbOnIO.sort(self.kufFmB)
+                vMbOnIO.sort(key=self.kufFmB)
                 for x in vMbOnIO:
                     AHGFnEkQQLedLjO = localtime(x[1])
                     hdAYuconaNioaS = ''
@@ -6428,9 +6428,6 @@ class rHAPXA(HTMLComponent, GUIComponent):
             nFWrGJyGHsBV = self.nFWrGJyGHsBV + self.FoLaaHWDpTaD * config.CTVG.C44.value * 60
             TvHugmr, width = self.lZgfoSEPEk(self.oOJsdNcNtHUAYXv, nFWrGJyGHsBV, config.CTVG.C44.value, WFVjWbKbX[2], WFVjWbKbX[3])
             self.drPxPp = PEwinOgXknkdV(TvHugmr, 0, width, self.oOJsdNcNtHUAYXv.height)
-            print("TvHugmr:", TvHugmr)
-            print("width:", width)            
-            print("self.oOJsdNcNtHUAYXv.h:", self.oOJsdNcNtHUAYXv.h)            
             self.l.setSelectionClip(eRect(int(TvHugmr), 0, int(width), int(self.oOJsdNcNtHUAYXv.h)), visible and FTzVXMd)
         else:
             self.drPxPp = self.oOJsdNcNtHUAYXv
@@ -6689,6 +6686,7 @@ class znjhVZLcrBZZBbq(Screen):
          'CoolCancel': self.JtAiZhAVofB,
          'CoolHelp': self.dtDeUpd,
          'CoolChannelUP': self.sKhaCbfBhi,
+         'CoolUP': self.sKhaCbfBhi,         
          'CoolChannelDown': self.TxbypgantrvRK,
          'CoolPREVIOUS': self.mwzQSZchaT,
          'CoolNEXT': self.nCinWmnbh,
