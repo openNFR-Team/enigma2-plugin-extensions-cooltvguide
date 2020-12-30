@@ -909,8 +909,7 @@ class zDKhcfAp(Screen):
             if vMbOnIO is not None:
                 oPDKlR = self['CoolSimilar']
                 qputw = oPDKlR.getText()
-                vMbOnIO.sort(key=self.kufFmB)
-                for x in vMbOnIO:
+                for x in sorted(vMbOnIO, key=lambda x: x[1]):
                     AHGFnEkQQLedLjO = localtime(x[1])
                     hdAYuconaNioaS = ''
                     if AHGFnEkQQLedLjO.tm_wday == 0:
@@ -934,14 +933,6 @@ class zDKhcfAp(Screen):
 
                 oPDKlR.setText(qputw)
             return
-
-    def kufFmB(self, x, y):
-        if x[1] < y[1]:
-            return -1
-        elif x[1] == y[1]:
-            return 0
-        else:
-            return 1
 
     def fxVcQUikA(self):
         UFXUK = []
