@@ -38,23 +38,23 @@ nfZQJKwSrVA = None
 UMUhLJhkv = None
 YPbLcThQWvMcQ = False
 xKmXaE = None
-if fileExists('/usr/lib/enigma2/python/Plugins/Extensions/SeriesPlugin/plugin.pyo'):
+if fileExists('/usr/lib/enigma2/python/Plugins/Extensions/SeriesPlugin/plugin.pyo') or fileExists('/usr/lib/enigma2/python/Plugins/Extensions/SeriesPlugin/plugin.py'):
     fspOMNbuwFCWk = True
 else:
     fspOMNbuwFCWk = False
-if fileExists('/usr/lib/enigma2/python/Plugins/Extensions/TheTVDB/plugin.pyo'):
+if fileExists('/usr/lib/enigma2/python/Plugins/Extensions/TheTVDB/plugin.pyo') or fileExists('/usr/lib/enigma2/python/Plugins/Extensions/TheTVDB/plugin.py'):
     sLpxMYXhjCROl = True
 else:
     sLpxMYXhjCROl = False
-if fileExists('/usr/lib/enigma2/python/Plugins/Extensions/IMDb/plugin.pyo'):
+if fileExists('/usr/lib/enigma2/python/Plugins/Extensions/IMDb/plugin.pyo') or fileExists('/usr/lib/enigma2/python/Plugins/Extensions/IMDb/plugin.py'):
     bPdxaOceY = True
 else:
     bPdxaOceY = False
-if fileExists('/usr/lib/enigma2/python/Plugins/Extensions/TMDb/plugin.pyo'):
+if fileExists('/usr/lib/enigma2/python/Plugins/Extensions/TMDb/plugin.pyo') or fileExists('/usr/lib/enigma2/python/Plugins/Extensions/TMDb/plugin.py'):
     WizweESn = True
 else:
     WizweESn = False
-if fileExists('/usr/lib/enigma2/python/Plugins/Extensions/OFDb/plugin.pyo'):
+if fileExists('/usr/lib/enigma2/python/Plugins/Extensions/OFDb/plugin.pyo') or fileExists('/usr/lib/enigma2/python/Plugins/Extensions/OFDb/plugin.py'):
     HikvfLr = True
 else:
     HikvfLr = False
@@ -4152,7 +4152,7 @@ class QZJZTIGWymw(HTMLComponent, GUIComponent):
         iXgrny = 0
         if self.cfCIaMrxr:
             OCCKSDwCPbq = len(self.cfCIaMrxr)
-            for tlvldyLLXXHo in range(OCCKSDwCPbq):
+            for tlvldyLLXXHo in list(range(OCCKSDwCPbq)):
                 KsiNzjF = (NhsvvZxTKXnV + tlvldyLLXXHo) % OCCKSDwCPbq
                 mutbPpmzLHBYz = self.cfCIaMrxr[KsiNzjF]
                 if mutbPpmzLHBYz[2:4] == '64':
@@ -5745,7 +5745,7 @@ class lKVEwGYfTpgWH(HTMLComponent, GUIComponent):
         iXgrny = 0
         if self.cfCIaMrxr:
             OCCKSDwCPbq = len(self.cfCIaMrxr)
-            for tlvldyLLXXHo in range(OCCKSDwCPbq):
+            for tlvldyLLXXHo in list(range(OCCKSDwCPbq)):
                 KsiNzjF = (NhsvvZxTKXnV + tlvldyLLXXHo) % OCCKSDwCPbq
                 mutbPpmzLHBYz = self.cfCIaMrxr[KsiNzjF]
                 if mutbPpmzLHBYz[2:4] == '64':
@@ -6071,7 +6071,7 @@ class rHAPXA(HTMLComponent, GUIComponent):
 
     def rxOsF(self, sTgNxkmJlcmVCv):
         if sTgNxkmJlcmVCv is not None:
-            for x in range(len(self.ScnvMSTPY)):
+            for x in list(range(len(self.ScnvMSTPY))):
                 if CoolAlternative(self.ScnvMSTPY[x][0], sTgNxkmJlcmVCv.toString()):
                     return x
 
@@ -6428,7 +6428,10 @@ class rHAPXA(HTMLComponent, GUIComponent):
             nFWrGJyGHsBV = self.nFWrGJyGHsBV + self.FoLaaHWDpTaD * config.CTVG.C44.value * 60
             TvHugmr, width = self.lZgfoSEPEk(self.oOJsdNcNtHUAYXv, nFWrGJyGHsBV, config.CTVG.C44.value, WFVjWbKbX[2], WFVjWbKbX[3])
             self.drPxPp = PEwinOgXknkdV(TvHugmr, 0, width, self.oOJsdNcNtHUAYXv.height)
-            self.l.setSelectionClip(eRect(TvHugmr, 0, width, self.oOJsdNcNtHUAYXv.h), visible and FTzVXMd)
+            print("TvHugmr:", TvHugmr)
+            print("width:", width)            
+            print("self.oOJsdNcNtHUAYXv.h:", self.oOJsdNcNtHUAYXv.h)            
+            self.l.setSelectionClip(eRect(int(TvHugmr), 0, int(width), int(self.oOJsdNcNtHUAYXv.h)), visible and FTzVXMd)
         else:
             self.drPxPp = self.oOJsdNcNtHUAYXv
             self.l.setSelectionClip(eRect(self.oOJsdNcNtHUAYXv.x, self.oOJsdNcNtHUAYXv.y, self.oOJsdNcNtHUAYXv.w, self.oOJsdNcNtHUAYXv.h), False)
